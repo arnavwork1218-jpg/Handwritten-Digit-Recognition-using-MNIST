@@ -39,14 +39,14 @@ The confusion matrix illustrates the classification performance across all ten c
 To verify that the model generalizes well to new data, a custom inference script (`CustomTest.py`) was used to process raw images created outside the training environment.
 
 **Methodology:**
-1. A handwritten digit ("8") was created using digital drawing tools.
+1. A handwritten digit was created using digital drawing tools (MS Paint).
 2. The image was preprocessed (grayscale conversion, resizing to 28x28, and color inversion) to match the MNIST data distribution.
 3. The model predicted the class with a confidence score.
 
-**Prediction Result:**
-The model correctly identified the external input digit with high confidence.
+### Real-World Testing Scenario
+The image below demonstrates the live testing environment using MS Paint inputs.
 
-![Prediction Result](Real-World%20Test.png.png)
+![Real World Test on MS Paint](Real%20World%20Test%20on%20ms%20paint.png)
 
 ---
 
