@@ -1,9 +1,9 @@
-# Handwritten Digit Recognition Project 🧠
+# Handwritten Digit Recognition Project 
 
-## 📌 Project Overview
+## Project Overview
 This project builds an AI system capable of recognizing handwritten digits (0-9) from images. I trained a **Convolutional Neural Network (CNN)** using the MNIST dataset and compared its performance against a standard Neural Network to show the importance of deep learning in computer vision.
 
-## 🚀 Key Features
+##  Key Features
 * **High Accuracy:** The main CNN model achieves **~99% accuracy**.
 * **Model Comparison:** Includes a second "Simple Model" script to demonstrate why CNNs are better than basic networks for image tasks.
 * **Real-World Testing:** Features a custom script (`CustomTest.py`) that allows the model to predict digits drawn in MS Paint, proving it works outside the training dataset.
@@ -13,10 +13,10 @@ This project builds an AI system capable of recognizing handwritten digits (0-9)
 * **Data Processing:** NumPy, Pandas
 * **Visualization:** Matplotlib, Seaborn
 
-## 📊 Results & Analysis
+## Results & Analysis
 
 ### 1. Model Performance
-* **CNN Model:** ~99.0% Accuracy (Winner) 🏆
+* **CNN Model:** ~99.0% Accuracy (Winner) 
 * **Simple Model:** ~97.5% Accuracy
 
 ### 2. Training Graphs
@@ -29,7 +29,7 @@ A detailed look at where the model succeeds and where it makes small errors (lik
 
 ---
 
-## 🧪 Real-World Proof
+## Real-World Proof
 I tested the model on my own handwriting created in MS Paint to ensure it generalizes well.
 * **Input:** A handwritten "8".
 * **Prediction:** Correctly identified with high confidence.
@@ -38,7 +38,7 @@ I tested the model on my own handwriting created in MS Paint to ensure it genera
 
 ---
 
-## 💻 How to Run
+## How to Run
 1.  **Install Libraries:**
     ```bash
     pip install -r requirements.txt
@@ -56,3 +56,4 @@ I tested the model on my own handwriting created in MS Paint to ensure it genera
     ```bash
     python CustomTest.py
     ```
+
