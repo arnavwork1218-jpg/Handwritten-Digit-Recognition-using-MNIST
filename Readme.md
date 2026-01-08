@@ -1,63 +1,70 @@
-# Handwritten Digit Recognition Project 
+# Handwritten Digit Recognition System
 
-Project Overview
-This project builds an AI system capable of recognizing handwritten digits (0-9) from images. I trained a **Convolutional Neural Network (CNN)** using the MNIST dataset and compared its performance against a standard Neural Network to show the importance of deep learning in computer vision.
+## Project Overview
+This project implements a machine learning pipeline capable of recognizing handwritten digits (0-9) from grayscale images. The system utilizes a Convolutional Neural Network (CNN) trained on the MNIST dataset. A comparative analysis was conducted against a standard Artificial Neural Network (ANN) to demonstrate the efficacy of feature extraction in computer vision tasks.
 
- Key Features
-* **High Accuracy:** The main CNN model achieves **~99% accuracy**.
-* **Model Comparison:** Includes a second "Simple Model" script to demonstrate why CNNs are better than basic networks for image tasks.
-* **Real-World Testing:** Features a custom script (`CustomTest.py`) that allows the model to predict digits drawn in MS Paint, proving it works outside the training dataset.
+## Key Objectives
+* **Deep Learning Implementation:** Developed a CNN architecture to extract spatial features from 28x28 pixel images.
+* **Comparative Analysis:** Benchmarked the CNN against a baseline Dense Neural Network to evaluate performance gains.
+* **Generalization Testing:** Validated the model's robustness on unseen, custom-generated handwritten samples.
 
- Tech Stack
-* **Python** (TensorFlow, Keras)
+## Technical Stack
+* **Language:** Python
+* **Frameworks:** TensorFlow, Keras
 * **Data Processing:** NumPy, Pandas
 * **Visualization:** Matplotlib, Seaborn
 
- Results & Analysis
+## Results and Analysis
 
- 1. Model Performance
-* **CNN Model:** ~99.0% Accuracy (Winner) 
-* **Simple Model:** ~97.5% Accuracy
+### 1. Model Performance Metrics
+* **CNN Model:** ~99.0% Accuracy
+* **Simple Model (ANN):** ~97.5% Accuracy
 
-2. Training Graphs
-The model learns quickly and stabilizes within 5 epochs.
-![Accuracy Graph](Accuracy%20&%20Loss%20Graphs.png.png)
+The Convolutional Neural Network outperformed the baseline model due to its ability to capture spatial hierarchies such as edges and loops.
 
- 3. Confusion Matrix
-A detailed look at where the model succeeds and where it makes small errors (like confusing 4s and 9s).
+### 2. Training Dynamics
+The model demonstrates rapid convergence and stability within 5 epochs, as evidenced by the accuracy and loss curves.
+![Accuracy and Loss Graphs](Accuracy%20&%20Loss%20Graphs.png.png)
+
+### 3. Confusion Matrix
+The confusion matrix below illustrates the classification performance across all classes, highlighting minor misclassifications between geometrically similar digits.
 ![Confusion Matrix](Confusion%20Matrix.png.png)
 
 ---
 
- Real-World Proof
-I tested the model on my own handwriting created in MS Paint to ensure it generalizes well.
-* **Input:** A handwritten "8".
-* **Prediction:** Correctly identified with high confidence.
+## Inference and Generalization Test
+To ensure the model generalizes well to external data, a custom inference script (`CustomTest.py`) was developed to process raw images created outside the training dataset.
 
-![Real World Test](Real-World%20Test.png.png)
+**Test Methodology:**
+1. A handwritten digit was created using digital drawing tools.
+2. The image was preprocessed (grayscale conversion, resizing, inversion) to match the MNIST data distribution.
+3. The model predicted the class with a confidence score.
+
+### Test Input Data
+The following image (`digit.png`) was used as the raw input for the test:
+![Test Input Image](digit.png)
+
+### Prediction Result
+The model correctly identified the input digit with high confidence:
+![Inference Result](Real-World%20Test.png.png)
 
 ---
 
- How to Run
-1.  **Install Libraries:**
+## Usage Instructions
+1.  **Install Dependencies:**
     ```bash
     pip install -r requirements.txt
     ```
-2.  **Train the Model:**
+2.  **Train the Primary Model:**
     ```bash
     python maincode.py
     ```
-3.  **Run the Comparison:**
+3.  **Run Comparative Analysis:**
     ```bash
     python SimpleModel.py
     ```
-4.  **Test Your Own Image:**
-    (Save a digit as `digit.png` in the folder first)
+4.  **Run Custom Inference:**
+    Ensure a sample image named `digit.png` is present in the root directory.
     ```bash
     python CustomTest.py
     ```
-
-
-
-
-
