@@ -3,12 +3,12 @@
 ## Project Overview
 This project builds an AI system capable of recognizing handwritten digits (0-9) from images. I trained a **Convolutional Neural Network (CNN)** using the MNIST dataset and compared its performance against a standard Neural Network to show the importance of deep learning in computer vision.
 
-##  Key Features
+## Key Features
 * **High Accuracy:** The main CNN model achieves **~99% accuracy**.
 * **Model Comparison:** Includes a second "Simple Model" script to demonstrate why CNNs are better than basic networks for image tasks.
 * **Real-World Testing:** Features a custom script (`CustomTest.py`) that allows the model to predict digits drawn in MS Paint, proving it works outside the training dataset.
 
-## 🛠️ Tech Stack
+## Tech Stack
 * **Python** (TensorFlow, Keras)
 * **Data Processing:** NumPy, Pandas
 * **Visualization:** Matplotlib, Seaborn
@@ -56,4 +56,5 @@ I tested the model on my own handwriting created in MS Paint to ensure it genera
     ```bash
     python CustomTest.py
     ```
+
 
