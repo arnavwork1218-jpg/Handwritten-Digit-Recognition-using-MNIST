@@ -5,9 +5,9 @@ from tensorflow.keras import layers, models
 import seaborn as sns
 from sklearn.metrics import confusion_matrix
 
-# ==========================================
+
 # 1. DATA INGESTION & PREPROCESSING
-# ==========================================
+
 def load_data():
     print(" Loading MNIST Data...")
     # Load dataset (already split into train and test sets)
@@ -26,9 +26,9 @@ def load_data():
     print(f"Data Loaded. Train shape: {x_train.shape}, Test shape: {x_test.shape}")
     return (x_train, y_train), (x_test, y_test)
 
-# ==========================================
+
 # 2. MODEL ARCHITECTURE (CNN)
-# ==========================================
+
 def build_cnn_model():
     print(" Building CNN Model...")
     model = models.Sequential([
@@ -54,9 +54,9 @@ def build_cnn_model():
                   metrics=['accuracy'])
     return model
 
-# ==========================================
+
 # 3. TRAINING & EVALUATION
-# ==========================================
+
 def plot_history(history):
     # Plot training vs validation accuracy
     plt.figure(figsize=(10, 4))
@@ -89,9 +89,9 @@ def evaluate_model(model, x_test, y_test):
     plt.xlabel('Predicted')
     plt.show()
 
-# ==========================================
+
 # MAIN EXECUTION FLOW
-# ==========================================
+
 if __name__ == "__main__":
     # 1. Load Data
     (x_train, y_train), (x_test, y_test) = load_data()
@@ -110,4 +110,5 @@ if __name__ == "__main__":
 
     # 5. Save Model (The "Product")
     model.save("mnist_digit_recognizer.h5")
+
     print("\ Model saved as 'mnist_digit_recognizer.h5'")
