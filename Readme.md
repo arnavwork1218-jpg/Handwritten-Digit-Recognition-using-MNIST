@@ -29,7 +29,7 @@ The model demonstrates rapid convergence and stability within 5 epochs. The plot
 ![Accuracy and Loss Graphs](Accuracy%20&%20Loss%20Graphs.png.png)
 
 ### 3. Confusion Matrix
-The confusion matrix illustrates the classification performance across all ten classes. The diagonal dominance confirms high precision, while off-diagonal elements highlight minor misclassifications between geometrically similar digits (e.g., 4 and 9).
+The confusion matrix illustrates the classification performance across all ten classes. The diagonal dominance confirms high precision, while off-diagonal elements highlight minor misclassifications between geometrically similar digits.
 
 ![Confusion Matrix](Confusion%20Matrix.png.png)
 
@@ -38,15 +38,15 @@ The confusion matrix illustrates the classification performance across all ten c
 ## Inference and Generalization Test
 To verify that the model generalizes well to new data, a custom inference script (`CustomTest.py`) was used to process raw images created outside the training environment.
 
-**Methodology:**
-1. A handwritten digit was created using digital drawing tools (MS Paint).
-2. The image was preprocessed (grayscale conversion, resizing to 28x28, and color inversion) to match the MNIST data distribution.
-3. The model predicted the class with a confidence score.
+### 1. Test Input Data
+A handwritten digit was created using MS Paint to serve as a raw input sample for testing.
 
-### Real-World Testing Scenario
-The image below demonstrates the live testing environment using MS Paint inputs.
+![Figure Drawn on MS Paint](Figure%20drawn%20on%20ms%20paint.png)
 
-![Real World Test on MS Paint](Real%20World%20Test%20on%20ms%20paint.png)
+### 2. Prediction Result
+The model processed the input image (grayscale conversion, resizing, and inversion) and correctly identified the digit with high confidence.
+
+![Real World Test Result](Real%20World%20Test%20on%20ms%20paint.png)
 
 ---
 
