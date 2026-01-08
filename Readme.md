@@ -11,7 +11,6 @@ This project implements a machine learning pipeline capable of recognizing handw
 
 ## Technical Stack
 * **Language:** Python 3.12
-* **Frameworks:** TensorFlow, Keras
 * **Data Processing:** NumPy, Pandas
 * **Visualization:** Matplotlib, Seaborn
 
@@ -72,3 +71,4 @@ The model processed the input image (grayscale conversion, resizing, and inversi
     ```bash
     python CustomTest.py
     ```
+
